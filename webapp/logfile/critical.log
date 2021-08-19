@@ -1,0 +1,28 @@
+[19/Aug/2021 14:00:48] CRITICAL [polls.views:15] Hypotenuse of 2, 1 is 7
+[19/Aug/2021 14:02:07] CRITICAL [polls.views:15] Hypotenuse of 2, 1 is 7
+[19/Aug/2021 14:02:54] WARNING [polls.views:8] Error demo1
+NoneType: None
+[19/Aug/2021 14:02:54] WARNING [polls.views:13] a=2 and b=1 are equal
+[19/Aug/2021 14:02:54] ERROR [polls.views:14] a=2 and b=1 cannot be negative
+[19/Aug/2021 14:02:54] CRITICAL [polls.views:15] Hypotenuse of 2, 1 is 7
+[19/Aug/2021 14:02:54] WARNING [django.request:224] Not Found: /favicon.ico
+[19/Aug/2021 14:02:54] WARNING [django.server:161] "GET /favicon.ico HTTP/1.1" 404 2217
+[19/Aug/2021 14:02:55] WARNING [polls.views:8] Error demo1
+NoneType: None
+[19/Aug/2021 14:02:55] WARNING [polls.views:13] a=2 and b=1 are equal
+[19/Aug/2021 14:02:55] ERROR [polls.views:14] a=2 and b=1 cannot be negative
+[19/Aug/2021 14:02:55] CRITICAL [polls.views:15] Hypotenuse of 2, 1 is 7
+[19/Aug/2021 14:02:55] WARNING [django.request:224] Not Found: /favicon.ico
+[19/Aug/2021 14:02:55] WARNING [django.server:161] "GET /favicon.ico HTTP/1.1" 404 2217
+[19/Aug/2021 14:02:55] WARNING [polls.views:8] Error demo1
+NoneType: None
+[19/Aug/2021 14:02:55] WARNING [polls.views:13] a=2 and b=1 are equal
+[19/Aug/2021 14:02:55] ERROR [polls.views:14] a=2 and b=1 cannot be negative
+[19/Aug/2021 14:02:55] CRITICAL [polls.views:15] Hypotenuse of 2, 1 is 7
+[19/Aug/2021 14:02:56] WARNING [django.request:224] Not Found: /favicon.ico
+[19/Aug/2021 14:02:56] WARNING [django.server:161] "GET /favicon.ico HTTP/1.1" 404 2217
+[19/Aug/2021 14:28:27] WARNING [polls.views:8] Error demo1
+NoneType: None
+[19/Aug/2021 14:28:27] WARNING [polls.views:13] a=2 and b=1 are equal
+[19/Aug/2021 14:28:27] ERROR [polls.views:14] a=2 and b=1 cannot be negative
+[19/Aug/2021 14:28:27] CRITICAL [polls.views:15] Hypotenuse of 2, 1 is 7

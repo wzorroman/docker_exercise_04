@@ -134,3 +134,72 @@ STATIC_URL = '/static/'
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+WEBAPP_DIR = os.path.realpath(os.path.join(BASE_DIR, '..'))
+LOG_PATH = os.path.realpath(os.path.join(WEBAPP_DIR, 'logfile'))
+FILE_ERROR_LOG_NAME = LOG_PATH + "/error.log"
+FILE_CRITICAL_LOG_NAME = LOG_PATH + "/critical.log"
+if not os.path.exists(LOG_PATH):
+    os.mkdir(LOG_PATH)
+    f= open(FILE_ERROR_LOG_NAME, "w+")
+    f.close()
+    f1= open(FILE_CRITICAL_LOG_NAME, "w+")
+    f1.close
+
+LOGGING = {
+    'version': 1,
+    'disable_existing_loggers': True,
+    'formatters': {
+        'standard': {
+            'format': "[%(asctime)s] %(levelname)s [%(name)s:%(lineno)s] %(message)s",
+            'datefmt': "%d/%b/%Y %H:%M:%S"
+        },
+    },
+    'handlers': {
+        'logfile': {
+            'level': 'DEBUG',
+            'class': 'logging.handlers.RotatingFileHandler',
+            'filename': FILE_ERROR_LOG_NAME,
+            'maxBytes': 50000,
+            'backupCount': 5,
+            'formatter': 'standard',
+        },
+        'logfilecritical': {
+            'level': 'DEBUG',
+            'class': 'logging.handlers.RotatingFileHandler',
+            'filename': FILE_CRITICAL_LOG_NAME,
+            'maxBytes': 50000,
+            'backupCount': 5,
+            'formatter': 'standard',
+        },
+        'console': {
+            'level': 'INFO',
+            'class': 'logging.StreamHandler',
+            'formatter': 'standard'
+        },
+    },
+    'loggers': {
+        '': {
+            'level': 'DEBUG',
+            'handlers': ['console']
+        },
+        'django': {
+            'handlers': ['console'],
+            'propagate': True,
+            'level': 'WARNING',
+        },
+        'django.db.backends': {
+            'handlers': ['console'],
+            'level': 'DEBUG',
+            'propagate': False,
+        },
+        'polls': {
+            'level': 'WARNING',
+            'handlers': ['console', 'logfile'],           
+        },
+        '': {
+            'level': 'CRITICAL',
+            'handlers': ['console', 'logfilecritical'],
+        },
+    }
+}
